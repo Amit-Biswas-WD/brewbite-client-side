@@ -1,6 +1,6 @@
 const Coffees = () => {
   return (
-    <div>Coffees</div>
+    <div className="mt-16 text-black bg-[#f5ebe6]">Coffees</div>
   )
 }
 
