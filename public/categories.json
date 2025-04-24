@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Espresso",
+    "image": "https://i.ibb.co.com/JWgB4W4p/Espresso.jpg"
+  },
+  {
+    "name": "Latte",
+    "image": "https://i.ibb.co.com/TDwQTyX0/Latte.jpg"
+  },
+  {
+    "name": "Cappuccino",
+    "image": "https://i.ibb.co.com/cKFMZZ4h/Cappuccino.png"
+  },
+  {
+    "name": "Mocha",
+    "image": "https://i.ibb.co.com/p63d3Fsh/Mocha.jpg"
+  },
+  {
+    "name": "Cold Brew",
+    "image": "https://i.ibb.co.com/TMgrXKnp/coldBrew.jpg"
+  }
+]
