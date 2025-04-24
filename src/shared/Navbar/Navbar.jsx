@@ -28,14 +28,14 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-400 ${
-          isScrolled ? "bg-gray-500 shadow-md" : "bg-gray-700"
+          isScrolled ? "bg-[#e5c9b7] shadow-md" : "bg-[#ddbeab] shadow-xl"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/">
-              <div className="flex items-center font-sans text-yellow-400">
+              <div className="flex items-center font-sans text-yellow-800">
                 <h2 className="text-3xl font-bold uppercase font-playfair hidden lg:block">
                   Brew Bite
                 </h2>
@@ -57,7 +57,7 @@ const Navbar = () => {
                     key={item.name}
                     to={item.path}
                     className={`${
-                      isActive ? "text-green-400" : "text-white"
+                      isActive ? "text-green-400" : "text-black"
                     } hover:text-green-400 font-normal transition-all duration-300`}
                   >
                     {item.name}
@@ -68,7 +68,7 @@ const Navbar = () => {
 
             {/* Mobile menu icon */}
             <div className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+              <button onClick={() => setIsOpen(!isOpen)} className="text-black">
                 {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
               </button>
             </div>

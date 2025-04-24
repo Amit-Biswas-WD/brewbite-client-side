@@ -3,7 +3,7 @@ import hero from "../../../../public/hero/harvesterimg.jpg"
 const Hero = () => {
   return (
     <div>    <div className="">
-    <div className="hero min-h-screen bg-gray-300">
+    <div className="hero min-h-screen bg-[#f5ebe6]">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           src={hero}
