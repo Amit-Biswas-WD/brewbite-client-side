@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const PriceDropdownButton = () => {
+const PriceButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -71,5 +71,5 @@ const PriceDropdownButton = () => {
   );
 };
 
-export default PriceDropdownButton;
+export default PriceButton;
  

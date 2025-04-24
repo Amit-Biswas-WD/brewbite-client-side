@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CategoryDropdownButton = () => {
+const CategoryButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -71,4 +71,4 @@ const CategoryDropdownButton = () => {
   );
 };
 
-export default CategoryDropdownButton;
+export default CategoryButton;
