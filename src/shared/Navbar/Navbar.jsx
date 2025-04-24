@@ -10,9 +10,9 @@ const Navbar = () => {
   const navItems = [
     { name: "", path: "/" },
     { name: "All Coffees", path: "/alCoffees" },
-    { name: "Login", path: "/login" },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Contact", path: "/contact" },
+    { name: "Login", path: "/login" },
   ];
 
   // Scroll listener
@@ -57,8 +57,8 @@ const Navbar = () => {
                     key={item.name}
                     to={item.path}
                     className={`${
-                      isActive ? "text-green-400" : "text-black"
-                    } hover:text-green-400 font-normal transition-all duration-300`}
+                      isActive ? "text-fuchsia-600" : "text-black"
+                    } hover:text-fuchsia-600 font-normal transition-all duration-300`}
                   >
                     {item.name}
                   </Link>
