@@ -20,7 +20,7 @@ const FeaturedCoffees = () => {
           {featuredCoffees.slice(0, 6).map((coffee, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition-all duration-300"
+              className="bg-[#f1f0ef] rounded-lg shadow-md p-4 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-90 h-64 overflow-hidden">
                 <img
