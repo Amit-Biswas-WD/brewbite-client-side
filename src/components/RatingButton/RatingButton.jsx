@@ -1,13 +1,23 @@
 import { useState } from "react";
 
-const RatingButton = () => {
+const RatingButton = ({ featuredCoffees, setRating }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+  const closeDropdown = () => setIsOpen(false);
 
-  const handleOptionClick = () => {
-    setIsOpen(false);
+  const handleHighRating = () => {
+    const sorted = [...featuredCoffees].sort((a, b) => b.rating - a.rating);
+    setRating(sorted);
+    closeDropdown();
   };
+
+  const handleLowRating = () => {
+    const sorted = [...featuredCoffees].sort((a, b) => a.rating - b.rating);
+    setRating(sorted);
+    closeDropdown();
+  };
+
   return (
     <div className="relative inline-block text-left mt-[68px]">
       <button
@@ -35,34 +45,16 @@ const RatingButton = () => {
         <div className="absolute -right-16 z-10 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
           <div className="py-1">
             <button
-              onClick={handleOptionClick}
+              onClick={handleHighRating}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
-              Espresso
+              High to Low
             </button>
             <button
-              onClick={handleOptionClick}
+              onClick={handleLowRating}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
-              Latte
-            </button>
-            <button
-              onClick={handleOptionClick}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Cappuccino
-            </button>
-            <button
-              onClick={handleOptionClick}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Mocha
-            </button>
-            <button
-              onClick={handleOptionClick}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Cold Brew
+              Low to High
             </button>
           </div>
         </div>
@@ -72,4 +64,3 @@ const RatingButton = () => {
 };
 
 export default RatingButton;
-  

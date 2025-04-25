@@ -13,32 +13,18 @@ const CoffeesDropDown = () => {
   const [rating, setRating] = useState([]);
 
   useEffect(() => {
-    setPrice(featuredCoffees)
-    setCategory(featuredCoffees)
-    setRating(featuredCoffees)
-  },[featuredCoffees])
-
-  const handleHighPrice = () => {
-    const sorted = [...featuredCoffees].sort(
-      (high, low) => low.price - high.price
-    );
-    setPrice(sorted );
-  };
-  
-  const handleLowPrice = () => {
-    const sorted  = [...featuredCoffees].sort(
-      (high, low) => high.sorted  - low.sorted 
-    );
-    setPrice(sorted );
-  };
+    setPrice(featuredCoffees);
+    setCategory(featuredCoffees);
+    setRating(featuredCoffees);
+  }, [featuredCoffees]);
 
   return (
     <div className="bg-[#f5ebe6]">
       <div className="container mx-auto">
         <div className="flex justify-between mt-4 mb-2 stack gap-8">
-          <CategoryButton />
-          <PriceButton handleLowPrice={handleLowPrice} handleHighPrice={handleHighPrice} />
-          <RatingButton />
+          <CategoryButton featuredCoffees={featuredCoffees} setCategory={setCategory} />
+          <PriceButton featuredCoffees={featuredCoffees} setPrice={setPrice} />
+          <RatingButton featuredCoffees={featuredCoffees} setRating={setPrice} />
           <SearchBar />
         </div>
         <Coffees price={price} />
