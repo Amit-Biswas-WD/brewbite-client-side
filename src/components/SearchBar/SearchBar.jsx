@@ -1,24 +1,15 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
-const namesList = [
-  "Latte",
-  "Espresso",
-  "Cappuccino",
-  "Macchiato",
-  "Mocha",
-  "Americano",
-  "Flat White",
-  "Cold Brew",
-  "Nitro Coffee",
-  "Affogato",
-];
-
-const SearchBar = ({ featuredCoffees, SearchBar }) => {
+const SearchBar = ({ featuredCoffees, setSearchBar }) => {
   const [query, setQuery] = useState("");
 
-  const filteredNames = namesList.filter((name) =>
-    name.toLowerCase().includes(query.toLowerCase())
+  const filteredCoffees = featuredCoffees.filter((coffee) =>
+    coffee.name.toLowerCase().includes(query.toLowerCase())
   );
+
+  useEffect(() => {
+    setSearchBar(filteredCoffees);
+  }, [query, featuredCoffees, setSearchBar]);
 
   return (
     <div className="flex flex-col items-center px-4 mt-[68px]">
@@ -31,19 +22,18 @@ const SearchBar = ({ featuredCoffees, SearchBar }) => {
       />
 
       <ul className="mt-4 w-full max-w-md bg-gray-400 rounded-lg shadow-lg text-left">
-        {query &&
-          (filteredNames.length > 0 ? (
-            filteredNames.map((name, index) => (
+        {query && filteredCoffees.length > 0
+          ? filteredCoffees.map((coffee, index) => (
               <li
                 key={index}
-                className="px-4 py-2 border-b border-gray-200 hover:bg-[#ddbeab] hover:text-black transition"
+                className="px-4 hidden py-2 border-b border-gray-200 hover:bg-[#ddbeab] hover:text-black transition"
               >
-                {name}
+                {coffee.name}
               </li>
             ))
-          ) : (
-            <li className="px-4 py-2 text-red-500">No results found</li>
-          ))}
+          : query && (
+              <li className="px-4 py-2 text-red-500">No results found</li>
+            )}
       </ul>
     </div>
   );
