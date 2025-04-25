@@ -1,19 +1,13 @@
 import { FaStar } from "react-icons/fa";
-import useCategory from "../../hooks/useCategory";
 import { Link } from "react-router-dom";
 
-const Coffees = () => {
-  const [featuredCoffees] = useCategory();
-
+const Coffees = ({ price }) => {
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {featuredCoffees.map((coffee, index) => (
-          <Link to={`/coffeeDetails/${coffee._id}`}>
-            <div
-              key={index}
-              className="bg-[#f1f0ef] rounded-lg shadow-md p-4 hover:shadow-xl transition-all duration-300"
-            >
+        {price.map((coffee, index) => (
+          <Link to={`/coffeeDetails/${coffee._id}`} key={index}>
+            <div className="bg-[#f1f0ef] rounded-lg shadow-md p-4 hover:shadow-xl transition-all duration-300">
               <div className="w-90 h-64 overflow-hidden">
                 <img
                   src={coffee.image}
@@ -34,8 +28,7 @@ const Coffees = () => {
                   Order Now
                 </button>
                 <p className="text-black">
-                  $ {""}
-                  {coffee.price}
+                  $ {coffee.price}
                 </p>
               </div>
             </div>
