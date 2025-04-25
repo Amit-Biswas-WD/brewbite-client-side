@@ -1,14 +1,8 @@
-import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import useCategory from "../../../hooks/useCategory";
 
 const FeaturedCoffees = () => {
-  const [featuredCoffees, setFeaturedCoffees] = useState([]);
-
-  useEffect(() => {
-    fetch("./category.json")
-      .then((res) => res.json())
-      .then((data) => setFeaturedCoffees(data));
-  }, []);
+  const [featuredCoffees] = useCategory();
 
   return (
     <div className="bg-[#f5ebe6]">
