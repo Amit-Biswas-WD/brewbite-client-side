@@ -8,26 +8,22 @@ import { useEffect, useState } from "react";
 
 const CoffeesDropDown = () => {
   const [featuredCoffees] = useCategory([]);
-  const [price, setPrice] = useState([]);
-  const [category, setCategory] = useState([]);
-  const [rating, setRating] = useState([]);
+  const [value, setValue] = useState([]);
 
   useEffect(() => {
-    setPrice(featuredCoffees);
-    setCategory(featuredCoffees);
-    setRating(featuredCoffees);
+    setValue(featuredCoffees);
   }, [featuredCoffees]);
 
   return (
     <div className="bg-[#f5ebe6]">
       <div className="container mx-auto">
         <div className="flex justify-between mt-4 mb-2 stack gap-8">
-          <CategoryButton featuredCoffees={featuredCoffees} setCategory={setCategory} />
-          <PriceButton featuredCoffees={featuredCoffees} setPrice={setPrice} />
-          <RatingButton featuredCoffees={featuredCoffees} setRating={setPrice} />
+          <CategoryButton featuredCoffees={featuredCoffees} setCategory={setValue} />
+          <PriceButton featuredCoffees={featuredCoffees} setPrice={setValue} />
+          <RatingButton featuredCoffees={featuredCoffees} setRating={setValue} />
           <SearchBar />
         </div>
-        <Coffees price={price} />
+        <Coffees price={value} />
       </div>
     </div>
   );
