@@ -13,7 +13,7 @@ const namesList = [
   "Affogato",
 ];
 
-const SearchBar = () => {
+const SearchBar = ({ featuredCoffees, SearchBar }) => {
   const [query, setQuery] = useState("");
 
   const filteredNames = namesList.filter((name) =>

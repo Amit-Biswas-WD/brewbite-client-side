@@ -21,9 +21,9 @@ const CoffeesDropDown = () => {
           <CategoryButton featuredCoffees={featuredCoffees} setCategory={setValue} />
           <PriceButton featuredCoffees={featuredCoffees} setPrice={setValue} />
           <RatingButton featuredCoffees={featuredCoffees} setRating={setValue} />
-          <SearchBar />
+          <SearchBar featuredCoffees={featuredCoffees} setSearchBar={setValue}/>
         </div>
-        <Coffees price={value} />
+        <Coffees value={value} />
       </div>
     </div>
   );

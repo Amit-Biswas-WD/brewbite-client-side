@@ -1,13 +1,19 @@
 import { useState } from "react";
 
-const CategoryButton = () => {
+const CategoryButton = ({ featuredCoffees, setCategory }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+  const closeDropdown = () => setIsOpen(false);
 
-  const handleOptionClick = () => {
-    setIsOpen(false);
+  const handleCategoryFilter = (category) => {
+    const filteredCoffees = featuredCoffees.filter(
+      (coffee) => coffee.category === category
+    );
+    setCategory(filteredCoffees);
+    closeDropdown();
   };
+
   return (
     <div className="relative inline-block text-left mt-[68px]">
       <button
@@ -35,31 +41,31 @@ const CategoryButton = () => {
         <div className="absolute -right-16 z-10 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
           <div className="py-1">
             <button
-              onClick={handleOptionClick}
+              onClick={() => handleCategoryFilter("Espresso")}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Espresso
             </button>
             <button
-              onClick={handleOptionClick}
+              onClick={() => handleCategoryFilter("Latte")}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Latte
             </button>
             <button
-              onClick={handleOptionClick}
+              onClick={() => handleCategoryFilter("Cappuccino")}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Cappuccino
             </button>
             <button
-              onClick={handleOptionClick}
+              onClick={() => handleCategoryFilter("Mocha")}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Mocha
             </button>
             <button
-              onClick={handleOptionClick}
+              onClick={() => handleCategoryFilter("Cold Brew")}
               className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             >
               Cold Brew
