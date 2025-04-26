@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaEyeSlash } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import Google from "../../shared/Google/Google";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,8 +23,7 @@ const Login = () => {
           Welcome back
         </h2>
         <div className="flex justify-center text-center items-center text-black">
-          {/* <Google /> */}
-          Google
+          <Google />
         </div>
         <div className="flex justify-center items-center gap-8 mt-8">
           <hr className="w-40 text-gray-700" />
