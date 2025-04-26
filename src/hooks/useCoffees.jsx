@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-const useCategory = () => {
+const useCoffees = () => {
   const [featuredCoffees, setFeaturedCoffees] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/category")
+    fetch("http://localhost:5000/coffees")
       .then((res) => res.json())
       .then((data) => setFeaturedCoffees(data));
   }, []);
@@ -12,4 +12,4 @@ const useCategory = () => {
   return [featuredCoffees];
 };
 
-export default useCategory;
+export default useCoffees;

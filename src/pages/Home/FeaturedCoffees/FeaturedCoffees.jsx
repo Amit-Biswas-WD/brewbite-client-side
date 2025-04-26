@@ -1,9 +1,9 @@
 import { FaStar } from "react-icons/fa";
-import useCategory from "../../../hooks/useCategory";
 import { Link } from "react-router-dom";
+import useCoffees from './../../../hooks/useCoffees';
 
 const FeaturedCoffees = () => {
-  const [featuredCoffees] = useCategory();
+  const [featuredCoffees] = useCoffees();
 
   return (
     <div className="bg-[#f5ebe6]">

@@ -1,9 +1,27 @@
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CoffeeDetails = () => {
   const coffee = useLoaderData();
   const { category, name, image, description, ingredients, price, rating } =
     coffee;
+
+  const handleOrders = () => {
+    fetch(`http://localhost:5000/orders`, {
+      method: "POST",
+      body: JSON.stringify(coffee),
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast("Your Order is confirm");
+        }
+      });
+  };
 
   return (
     <div className="max-w-4xl mx-auto mt-16 p-6 bg-white shadow-xl rounded-2xl text-gray-800">
@@ -60,7 +78,10 @@ const CoffeeDetails = () => {
               </div>
 
               {/* Order Button */}
-              <button className="mt-4 bg-[#7b4f29] text-white px-4 py-2 rounded hover:bg-[#5c3c20]">
+              <button
+                onClick={handleOrders}
+                className="mt-4 bg-[#7b4f29] text-white px-4 py-2 rounded hover:bg-[#5c3c20]"
+              >
                 Order Now
               </button>
             </div>

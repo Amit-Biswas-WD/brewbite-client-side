@@ -5,7 +5,7 @@
     "image": "https://i.ibb.co.com/QFjv2tXJ/classic-Espresso.jpg",
     "description": "Strong and bold single shot of espresso.",
     "ingredients": ["Espresso"],
-    "price": 2.5,
+    "price": 599,
     "rating": 4.8,
     "relatedCoffees": ["Double Espresso", "Latte"],
     "featuredCoffee": true
@@ -16,7 +16,7 @@
     "image": "https://i.ibb.co.com/b5Ymy1Gv/vanilla-Latte.jpg",
     "description": "Smooth latte with a hint of vanilla sweetness.",
     "ingredients": ["Espresso", "Steamed Milk", "Vanilla Syrup"],
-    "price": 3.5,
+    "price": 849,
     "rating": 4.6,
     "relatedCoffees": ["Caramel Latte", "Mocha"],
     "featuredCoffee": false
@@ -27,7 +27,7 @@
     "image": "https://i.ibb.co.com/3YMCvD02/flat-White.jpg",
     "description": "Equal parts espresso, steamed milk, and foam.",
     "ingredients": ["Espresso", "Steamed Milk", "Foamed Milk"],
-    "price": 3.0,
+    "price": 749,
     "rating": 4.7,
     "relatedCoffees": ["Flat White", "Mocha"],
     "featuredCoffee": false
@@ -38,7 +38,7 @@
     "image": "https://i.ibb.co.com/FkFGWs3x/chocolate-Mocha.jpg",
     "description": "Espresso with chocolate syrup and steamed milk.",
     "ingredients": ["Espresso", "Chocolate", "Steamed Milk"],
-    "price": 3.8,
+    "price": 999,
     "rating": 4.5,
     "relatedCoffees": ["White Mocha", "Latte"],
     "featuredCoffee": true
@@ -49,7 +49,7 @@
     "image": "https://i.ibb.co.com/5WdkLJxb/vanilla-Sweet-Cream-Cold-Brew.jpg",
     "description": "Smooth, slow-brewed cold coffee.",
     "ingredients": ["Cold Brew Coffee", "Ice"],
-    "price": 3.2,
+    "price": 699,
     "rating": 4.3,
     "relatedCoffees": ["Nitro Cold Brew", "Iced Latte"],
     "featuredCoffee": false
@@ -60,7 +60,7 @@
     "image": "https://i.ibb.co.com/9HHckcnG/double-Espresso.jpg",
     "description": "A double shot of pure bold espresso.",
     "ingredients": ["Espresso"],
-    "price": 3.0,
+    "price": 649,
     "rating": 4.9,
     "relatedCoffees": ["Classic Espresso", "Americano"],
     "featuredCoffee": false
@@ -71,7 +71,7 @@
     "image": "https://i.ibb.co.com/jPB1RbKP/caramel-Latte.jpg",
     "description": "Creamy latte with rich caramel flavor.",
     "ingredients": ["Espresso", "Steamed Milk", "Caramel Syrup"],
-    "price": 3.6,
+    "price": 899,
     "rating": 4.7,
     "relatedCoffees": ["Vanilla Latte", "Mocha"],
     "featuredCoffee": false
@@ -82,7 +82,7 @@
     "image": "https://i.ibb.co.com/x86pd4Ss/dry-Cappucco.jpg",
     "description": "Less milk, more foam, for a drier texture.",
     "ingredients": ["Espresso", "Foamed Milk"],
-    "price": 3.0,
+    "price": 749,
     "rating": 4.2,
     "relatedCoffees": ["Classic Cappuccino", "Flat White"],
     "featuredCoffee": true
@@ -93,7 +93,7 @@
     "image": "https://i.ibb.co.com/ynZR50jT/flat-White.jpg",
     "description": "Smooth white chocolate mocha delight.",
     "ingredients": ["Espresso", "White Chocolate", "Steamed Milk"],
-    "price": 4.0,
+    "price": 949,
     "rating": 4.5,
     "relatedCoffees": ["Chocolate Mocha", "Latte"],
     "featuredCoffee": false
@@ -104,7 +104,7 @@
     "image": "https://i.ibb.co.com/vx4Qc0fM/nitro-Cold-Brew.jpg",
     "description": "Infused with nitrogen for a creamy finish.",
     "ingredients": ["Cold Brew", "Nitrogen"],
-    "price": 4.2,
+    "price": 999,
     "rating": 4.6,
     "relatedCoffees": ["Cold Brew Classic", "Iced Americano"],
     "featuredCoffee": false
@@ -115,7 +115,7 @@
     "image": "https://i.ibb.co.com/fGdRTZnG/ristretto.jpg",
     "description": "Shorter shot of espresso for a concentrated taste.",
     "ingredients": ["Espresso"],
-    "price": 2.7,
+    "price": 599,
     "rating": 4.3,
     "relatedCoffees": ["Double Espresso", "Lungo"],
     "featuredCoffee": false
@@ -126,7 +126,7 @@
     "image": "https://i.ibb.co.com/ZzCNd0ZG/hazelnut-Latte.jpg",
     "description": "Latte with nutty hazelnut twist.",
     "ingredients": ["Espresso", "Steamed Milk", "Hazelnut Syrup"],
-    "price": 3.7,
+    "price": 899,
     "rating": 4.6,
     "relatedCoffees": ["Caramel Latte", "Vanilla Latte"],
     "featuredCoffee": true
@@ -137,7 +137,7 @@
     "image": "https://i.ibb.co.com/SX9Qscn5/iced-Cappuco.jpg",
     "description": "Chilled version of your favorite cappuccino.",
     "ingredients": ["Espresso", "Milk", "Ice", "Foam"],
-    "price": 3.5,
+    "price": 849,
     "rating": 4.4,
     "relatedCoffees": ["Cold Brew", "Iced Latte"],
     "featuredCoffee": true
@@ -148,7 +148,7 @@
     "image": "https://i.ibb.co.com/2YCZfcP3/peppermint-Mocha.jpg",
     "description": "Holiday favorite with chocolate and peppermint.",
     "ingredients": ["Espresso", "Chocolate", "Peppermint", "Milk"],
-    "price": 4.5,
+    "price": 999,
     "rating": 4.8,
     "relatedCoffees": ["Mocha", "White Mocha"],
     "featuredCoffee": true
@@ -159,7 +159,7 @@
     "image": "https://i.ibb.co.com/9HShW4YR/iced-Americano.jpg",
     "description": "Espresso over ice with water. Crisp and strong.",
     "ingredients": ["Espresso", "Water", "Ice"],
-    "price": 2.8,
+    "price": 699,
     "rating": 4.4,
     "relatedCoffees": ["Cold Brew", "Americano"],
     "featuredCoffee": true
@@ -170,7 +170,7 @@
     "image": "https://i.ibb.co.com/9kr4YzCg/lungo.jpg",
     "description": "Longer-pulled espresso for a more intense drink.",
     "ingredients": ["Espresso"],
-    "price": 3.0,
+    "price": 649,
     "rating": 4.2,
     "relatedCoffees": ["Ristretto", "Americano"],
     "featuredCoffee": false
@@ -181,7 +181,7 @@
     "image": "https://i.ibb.co.com/6Jvyf0R9/matcha-Latte.jpg",
     "description": "Green tea latte with creamy texture.",
     "ingredients": ["Matcha", "Milk"],
-    "price": 4.0,
+    "price": 999,
     "rating": 4.6,
     "relatedCoffees": ["Green Tea Latte", "Vanilla Latte"],
     "featuredCoffee": true
@@ -192,7 +192,7 @@
     "image": "https://i.ibb.co.com/ynZR50jT/flat-White.jpg",
     "description": "Espresso with microfoam milk, less frothy than cappuccino.",
     "ingredients": ["Espresso", "Steamed Milk"],
-    "price": 3.5,
+    "price": 799,
     "rating": 4.7,
     "relatedCoffees": ["Latte", "Cappuccino"],
     "featuredCoffee": true
@@ -203,7 +203,7 @@
     "image": "https://i.ibb.co.com/DHkGjDPW/iced-Mocha.jpg",
     "description": "Chocolatey mocha served chilled over ice.",
     "ingredients": ["Espresso", "Chocolate", "Milk", "Ice"],
-    "price": 4.0,
+    "price": 949,
     "rating": 4.5,
     "relatedCoffees": ["Cold Brew", "Mocha"],
     "featuredCoffee": false
@@ -214,7 +214,7 @@
     "image": "https://i.ibb.co.com/5WdkLJxb/vanilla-Sweet-Cream-Cold-Brew.jpg",
     "description": "Cold brew topped with sweet vanilla cream.",
     "ingredients": ["Cold Brew", "Vanilla Cream"],
-    "price": 4.2,
+    "price": 999,
     "rating": 4.9,
     "relatedCoffees": ["Cold Brew", "Caramel Cold Brew"],
     "featuredCoffee": false
@@ -225,7 +225,7 @@
     "image": "https://i.ibb.co.com/k2QPSRBv/chai-Latte.jpg",
     "description": "Spiced chai tea with steamed milk.",
     "ingredients": ["Chai", "Milk", "Spices"],
-    "price": 3.8,
+    "price": 849,
     "rating": 4.4,
     "relatedCoffees": ["Matcha Latte", "Latte"],
     "featuredCoffee": true
@@ -236,7 +236,7 @@
     "image": "https://i.ibb.co.com/0prdQPQP/macchiato.jpg",
     "description": "Espresso marked with a touch of foam.",
     "ingredients": ["Espresso", "Foamed Milk"],
-    "price": 3.1,
+    "price": 649,
     "rating": 4.3,
     "relatedCoffees": ["Espresso", "Cappuccino"],
     "featuredCoffee": false
@@ -247,7 +247,7 @@
     "image": "https://i.ibb.co.com/1tDFvpKP/caramel-Cold-Brew.jpg",
     "description": "Cold brew infused with caramel and cream.",
     "ingredients": ["Cold Brew", "Caramel", "Cream"],
-    "price": 4.3,
+    "price": 1199,
     "rating": 4.7,
     "relatedCoffees": ["Vanilla Sweet Cream", "Iced Mocha"],
     "featuredCoffee": true
@@ -258,7 +258,7 @@
     "image": "https://i.ibb.co.com/twwXs3vG/toffee-Nut-Mocha.jpg",
     "description": "Mocha with a toffee nut twist.",
     "ingredients": ["Espresso", "Toffee Nut", "Milk", "Chocolate"],
-    "price": 4.5,
+    "price": 1099,
     "rating": 4.6,
     "relatedCoffees": ["Mocha", "Caramel Latte"],
     "featuredCoffee": true
@@ -269,7 +269,7 @@
     "image": "https://i.ibb.co.com/gbybT2Xs/cinnamon-Cappuccino.jpg",
     "description": "Classic cappuccino topped with cinnamon.",
     "ingredients": ["Espresso", "Steamed Milk", "Foam", "Cinnamon"],
-    "price": 3.6,
+    "price": 799,
     "rating": 4.5,
     "relatedCoffees": ["Classic Cappuccino", "Chai Latte"],
     "featuredCoffee": false
@@ -280,7 +280,7 @@
     "image": "https://i.ibb.co.com/pjgjtfdg/pumpkin-Spice-Latte.jpg",
     "description": "Seasonal latte with pumpkin, cinnamon, and nutmeg.",
     "ingredients": ["Espresso", "Pumpkin", "Milk", "Cinnamon", "Nutmeg"],
-    "price": 4.8,
+    "price": 1299,
     "rating": 4.9,
     "relatedCoffees": ["Chai Latte", "Cinnamon Cappuccino"],
     "featuredCoffee": true

@@ -3,11 +3,11 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import CategoryButton from "../../components/CategoryButton/CategoryButton";
 import PriceButton from "../../components/PriceButton/PriceButton";
 import RatingButton from "../../components/RatingButton/RatingButton";
-import useCategory from "../../hooks/useCategory";
 import { useEffect, useState } from "react";
+import useCoffees from './../../hooks/useCoffees';
 
 const CoffeesDropDown = () => {
-  const [featuredCoffees] = useCategory([]);
+  const [featuredCoffees] = useCoffees([]);
   const [value, setValue] = useState([]);
 
   useEffect(() => {
