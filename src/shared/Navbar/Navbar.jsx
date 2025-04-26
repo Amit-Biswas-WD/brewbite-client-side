@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { toast } from "react-toastify"; // Toast জন্য
+import { toast } from "react-toastify"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

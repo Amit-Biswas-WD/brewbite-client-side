@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "category": "Espresso",
     "name": "Classic Espresso",
     "image": "https://i.ibb.co.com/QFjv2tXJ/classic-Espresso.jpg",
@@ -8,10 +7,10 @@
     "ingredients": ["Espresso"],
     "price": 2.5,
     "rating": 4.8,
-    "relatedCoffees": ["Double Espresso", "Latte"]
+    "relatedCoffees": ["Double Espresso", "Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 2,
     "category": "Latte",
     "name": "Vanilla Latte",
     "image": "https://i.ibb.co.com/b5Ymy1Gv/vanilla-Latte.jpg",
@@ -19,10 +18,10 @@
     "ingredients": ["Espresso", "Steamed Milk", "Vanilla Syrup"],
     "price": 3.5,
     "rating": 4.6,
-    "relatedCoffees": ["Caramel Latte", "Mocha"]
+    "relatedCoffees": ["Caramel Latte", "Mocha"],
+    "featuredCoffee": false
   },
   {
-    "id": 3,
     "category": "Cappuccino",
     "name": "Classic Cappuccino",
     "image": "https://i.ibb.co.com/3YMCvD02/flat-White.jpg",
@@ -30,10 +29,10 @@
     "ingredients": ["Espresso", "Steamed Milk", "Foamed Milk"],
     "price": 3.0,
     "rating": 4.7,
-    "relatedCoffees": ["Flat White", "Mocha"]
+    "relatedCoffees": ["Flat White", "Mocha"],
+    "featuredCoffee": false
   },
   {
-    "id": 4,
     "category": "Mocha",
     "name": "Chocolate Mocha",
     "image": "https://i.ibb.co.com/FkFGWs3x/chocolate-Mocha.jpg",
@@ -41,10 +40,10 @@
     "ingredients": ["Espresso", "Chocolate", "Steamed Milk"],
     "price": 3.8,
     "rating": 4.5,
-    "relatedCoffees": ["White Mocha", "Latte"]
+    "relatedCoffees": ["White Mocha", "Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 5,
     "category": "Cold Brew",
     "name": "Cold Brew Classic",
     "image": "https://i.ibb.co.com/5WdkLJxb/vanilla-Sweet-Cream-Cold-Brew.jpg",
@@ -52,10 +51,10 @@
     "ingredients": ["Cold Brew Coffee", "Ice"],
     "price": 3.2,
     "rating": 4.3,
-    "relatedCoffees": ["Nitro Cold Brew", "Iced Latte"]
+    "relatedCoffees": ["Nitro Cold Brew", "Iced Latte"],
+    "featuredCoffee": false
   },
   {
-    "id": 6,
     "category": "Espresso",
     "name": "Double Espresso",
     "image": "https://i.ibb.co.com/9HHckcnG/double-Espresso.jpg",
@@ -63,10 +62,10 @@
     "ingredients": ["Espresso"],
     "price": 3.0,
     "rating": 4.9,
-    "relatedCoffees": ["Classic Espresso", "Americano"]
+    "relatedCoffees": ["Classic Espresso", "Americano"],
+    "featuredCoffee": false
   },
   {
-    "id": 7,
     "category": "Latte",
     "name": "Caramel Latte",
     "image": "https://i.ibb.co.com/jPB1RbKP/caramel-Latte.jpg",
@@ -74,10 +73,10 @@
     "ingredients": ["Espresso", "Steamed Milk", "Caramel Syrup"],
     "price": 3.6,
     "rating": 4.7,
-    "relatedCoffees": ["Vanilla Latte", "Mocha"]
+    "relatedCoffees": ["Vanilla Latte", "Mocha"],
+    "featuredCoffee": false
   },
   {
-    "id": 8,
     "category": "Cappuccino",
     "name": "Dry Cappuccino",
     "image": "https://i.ibb.co.com/x86pd4Ss/dry-Cappucco.jpg",
@@ -85,10 +84,10 @@
     "ingredients": ["Espresso", "Foamed Milk"],
     "price": 3.0,
     "rating": 4.2,
-    "relatedCoffees": ["Classic Cappuccino", "Flat White"]
+    "relatedCoffees": ["Classic Cappuccino", "Flat White"],
+    "featuredCoffee": true
   },
   {
-    "id": 9,
     "category": "Mocha",
     "name": "White Mocha",
     "image": "https://i.ibb.co.com/ynZR50jT/flat-White.jpg",
@@ -96,10 +95,10 @@
     "ingredients": ["Espresso", "White Chocolate", "Steamed Milk"],
     "price": 4.0,
     "rating": 4.5,
-    "relatedCoffees": ["Chocolate Mocha", "Latte"]
+    "relatedCoffees": ["Chocolate Mocha", "Latte"],
+    "featuredCoffee": false
   },
   {
-    "id": 10,
     "category": "Cold Brew",
     "name": "Nitro Cold Brew",
     "image": "https://i.ibb.co.com/vx4Qc0fM/nitro-Cold-Brew.jpg",
@@ -107,10 +106,10 @@
     "ingredients": ["Cold Brew", "Nitrogen"],
     "price": 4.2,
     "rating": 4.6,
-    "relatedCoffees": ["Cold Brew Classic", "Iced Americano"]
+    "relatedCoffees": ["Cold Brew Classic", "Iced Americano"],
+    "featuredCoffee": false
   },
   {
-    "id": 11,
     "category": "Espresso",
     "name": "Ristretto",
     "image": "https://i.ibb.co.com/fGdRTZnG/ristretto.jpg",
@@ -118,10 +117,10 @@
     "ingredients": ["Espresso"],
     "price": 2.7,
     "rating": 4.3,
-    "relatedCoffees": ["Double Espresso", "Lungo"]
+    "relatedCoffees": ["Double Espresso", "Lungo"],
+    "featuredCoffee": false
   },
   {
-    "id": 12,
     "category": "Latte",
     "name": "Hazelnut Latte",
     "image": "https://i.ibb.co.com/ZzCNd0ZG/hazelnut-Latte.jpg",
@@ -129,10 +128,10 @@
     "ingredients": ["Espresso", "Steamed Milk", "Hazelnut Syrup"],
     "price": 3.7,
     "rating": 4.6,
-    "relatedCoffees": ["Caramel Latte", "Vanilla Latte"]
+    "relatedCoffees": ["Caramel Latte", "Vanilla Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 13,
     "category": "Cappuccino",
     "name": "Iced Cappuccino",
     "image": "https://i.ibb.co.com/SX9Qscn5/iced-Cappuco.jpg",
@@ -140,10 +139,10 @@
     "ingredients": ["Espresso", "Milk", "Ice", "Foam"],
     "price": 3.5,
     "rating": 4.4,
-    "relatedCoffees": ["Cold Brew", "Iced Latte"]
+    "relatedCoffees": ["Cold Brew", "Iced Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 14,
     "category": "Mocha",
     "name": "Peppermint Mocha",
     "image": "https://i.ibb.co.com/2YCZfcP3/peppermint-Mocha.jpg",
@@ -151,10 +150,10 @@
     "ingredients": ["Espresso", "Chocolate", "Peppermint", "Milk"],
     "price": 4.5,
     "rating": 4.8,
-    "relatedCoffees": ["Mocha", "White Mocha"]
+    "relatedCoffees": ["Mocha", "White Mocha"],
+    "featuredCoffee": true
   },
   {
-    "id": 15,
     "category": "Cold Brew",
     "name": "Iced Americano",
     "image": "https://i.ibb.co.com/9HShW4YR/iced-Americano.jpg",
@@ -162,10 +161,10 @@
     "ingredients": ["Espresso", "Water", "Ice"],
     "price": 2.8,
     "rating": 4.4,
-    "relatedCoffees": ["Cold Brew", "Americano"]
+    "relatedCoffees": ["Cold Brew", "Americano"],
+    "featuredCoffee": true
   },
   {
-    "id": 16,
     "category": "Espresso",
     "name": "Lungo",
     "image": "https://i.ibb.co.com/9kr4YzCg/lungo.jpg",
@@ -173,10 +172,10 @@
     "ingredients": ["Espresso"],
     "price": 3.0,
     "rating": 4.2,
-    "relatedCoffees": ["Ristretto", "Americano"]
+    "relatedCoffees": ["Ristretto", "Americano"],
+    "featuredCoffee": false
   },
   {
-    "id": 17,
     "category": "Latte",
     "name": "Matcha Latte",
     "image": "https://i.ibb.co.com/6Jvyf0R9/matcha-Latte.jpg",
@@ -184,10 +183,10 @@
     "ingredients": ["Matcha", "Milk"],
     "price": 4.0,
     "rating": 4.6,
-    "relatedCoffees": ["Green Tea Latte", "Vanilla Latte"]
+    "relatedCoffees": ["Green Tea Latte", "Vanilla Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 18,
     "category": "Cappuccino",
     "name": "Flat White",
     "image": "https://i.ibb.co.com/ynZR50jT/flat-White.jpg",
@@ -195,10 +194,10 @@
     "ingredients": ["Espresso", "Steamed Milk"],
     "price": 3.5,
     "rating": 4.7,
-    "relatedCoffees": ["Latte", "Cappuccino"]
+    "relatedCoffees": ["Latte", "Cappuccino"],
+    "featuredCoffee": true
   },
   {
-    "id": 19,
     "category": "Mocha",
     "name": "Iced Mocha",
     "image": "https://i.ibb.co.com/DHkGjDPW/iced-Mocha.jpg",
@@ -206,10 +205,10 @@
     "ingredients": ["Espresso", "Chocolate", "Milk", "Ice"],
     "price": 4.0,
     "rating": 4.5,
-    "relatedCoffees": ["Cold Brew", "Mocha"]
+    "relatedCoffees": ["Cold Brew", "Mocha"],
+    "featuredCoffee": false
   },
   {
-    "id": 20,
     "category": "Cold Brew",
     "name": "Vanilla Sweet Cream Cold Brew",
     "image": "https://i.ibb.co.com/5WdkLJxb/vanilla-Sweet-Cream-Cold-Brew.jpg",
@@ -217,10 +216,10 @@
     "ingredients": ["Cold Brew", "Vanilla Cream"],
     "price": 4.2,
     "rating": 4.9,
-    "relatedCoffees": ["Cold Brew", "Caramel Cold Brew"]
+    "relatedCoffees": ["Cold Brew", "Caramel Cold Brew"],
+    "featuredCoffee": false
   },
   {
-    "id": 21,
     "category": "Latte",
     "name": "Chai Latte",
     "image": "https://i.ibb.co.com/k2QPSRBv/chai-Latte.jpg",
@@ -228,10 +227,10 @@
     "ingredients": ["Chai", "Milk", "Spices"],
     "price": 3.8,
     "rating": 4.4,
-    "relatedCoffees": ["Matcha Latte", "Latte"]
+    "relatedCoffees": ["Matcha Latte", "Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 22,
     "category": "Espresso",
     "name": "Macchiato",
     "image": "https://i.ibb.co.com/0prdQPQP/macchiato.jpg",
@@ -239,10 +238,10 @@
     "ingredients": ["Espresso", "Foamed Milk"],
     "price": 3.1,
     "rating": 4.3,
-    "relatedCoffees": ["Espresso", "Cappuccino"]
+    "relatedCoffees": ["Espresso", "Cappuccino"],
+    "featuredCoffee": false
   },
   {
-    "id": 23,
     "category": "Cold Brew",
     "name": "Caramel Cold Brew",
     "image": "https://i.ibb.co.com/1tDFvpKP/caramel-Cold-Brew.jpg",
@@ -250,10 +249,10 @@
     "ingredients": ["Cold Brew", "Caramel", "Cream"],
     "price": 4.3,
     "rating": 4.7,
-    "relatedCoffees": ["Vanilla Sweet Cream", "Iced Mocha"]
+    "relatedCoffees": ["Vanilla Sweet Cream", "Iced Mocha"],
+    "featuredCoffee": true
   },
   {
-    "id": 24,
     "category": "Mocha",
     "name": "Toffee Nut Mocha",
     "image": "https://i.ibb.co.com/twwXs3vG/toffee-Nut-Mocha.jpg",
@@ -261,10 +260,10 @@
     "ingredients": ["Espresso", "Toffee Nut", "Milk", "Chocolate"],
     "price": 4.5,
     "rating": 4.6,
-    "relatedCoffees": ["Mocha", "Caramel Latte"]
+    "relatedCoffees": ["Mocha", "Caramel Latte"],
+    "featuredCoffee": true
   },
   {
-    "id": 25,
     "category": "Cappuccino",
     "name": "Cinnamon Cappuccino",
     "image": "https://i.ibb.co.com/gbybT2Xs/cinnamon-Cappuccino.jpg",
@@ -272,10 +271,10 @@
     "ingredients": ["Espresso", "Steamed Milk", "Foam", "Cinnamon"],
     "price": 3.6,
     "rating": 4.5,
-    "relatedCoffees": ["Classic Cappuccino", "Chai Latte"]
+    "relatedCoffees": ["Classic Cappuccino", "Chai Latte"],
+    "featuredCoffee": false
   },
   {
-    "id": 26,
     "category": "Latte",
     "name": "Pumpkin Spice Latte",
     "image": "https://i.ibb.co.com/pjgjtfdg/pumpkin-Spice-Latte.jpg",
@@ -283,6 +282,7 @@
     "ingredients": ["Espresso", "Pumpkin", "Milk", "Cinnamon", "Nutmeg"],
     "price": 4.8,
     "rating": 4.9,
-    "relatedCoffees": ["Chai Latte", "Cinnamon Cappuccino"]
+    "relatedCoffees": ["Chai Latte", "Cinnamon Cappuccino"],
+    "featuredCoffee": true
   }
 ]
