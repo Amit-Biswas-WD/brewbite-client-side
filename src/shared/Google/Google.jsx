@@ -15,7 +15,7 @@ const Google = () => {
   };
 
   return (
-    <button onClick={handleGoogle} className="flex gap-2 items-center btn">
+    <button onClick={handleGoogle} className="flex gap-2 items-center btn bg-white text-black shadow-2xl">
       <FcGoogle className="w-7 h-auto" />
       Sign up with Google
     </button>

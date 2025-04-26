@@ -3,9 +3,11 @@ import { FaEyeSlash } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Google from "../../shared/Google/Google";
+import useAuth from "../../hooks/useAuth";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { createUser } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,7 +18,16 @@ const SignIn = () => {
     const password = from.password.value;
     const valueInfo = { name, email, photo, password };
     console.log("User Registered:", valueInfo);
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <div className="flex justify-center mt-16 mb-1">
       <div className="w-full md:w-1/3 p-8 bg-[#f5ebe6]">
