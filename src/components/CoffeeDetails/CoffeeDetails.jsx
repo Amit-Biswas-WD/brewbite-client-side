@@ -1,15 +1,19 @@
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+import useAuth from "../../hooks/useAuth";
 
 const CoffeeDetails = () => {
   const coffee = useLoaderData();
+  const { user } = useAuth();
+  const email = user?.email || "";
+  const value = { email, coffee };
   const { category, name, image, description, ingredients, price, rating } =
     coffee;
 
   const handleOrders = () => {
     fetch(`http://localhost:5000/orders`, {
       method: "POST",
-      body: JSON.stringify(coffee),
+      body: JSON.stringify(value),
       headers: {
         "Content-type": "application/json",
       },
