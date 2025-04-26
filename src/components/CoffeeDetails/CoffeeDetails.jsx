@@ -17,7 +17,6 @@ const CoffeeDetails = () => {
           />
         </div>
 
-        {/* Right Side Details */}
         <div className="flex flex-col justify-between">
           <div>
             <h2 className="text-4xl font-bold mb-2">{name}</h2>
@@ -25,7 +24,6 @@ const CoffeeDetails = () => {
             <p className="text-lg mb-4 text-gray-700">{description}</p>
           </div>
 
-          {/* Divider */}
           <div className="flex items-center gap-4 my-8">
             <hr className="flex-grow border-t-2 border-[#e27f4e]" />
             <h2 className="text-[#e27f4e] text-xl font-bold text-center">
@@ -34,7 +32,6 @@ const CoffeeDetails = () => {
             <hr className="flex-grow border-t-2 border-[#e27f4e]" />
           </div>
 
-          {/* Ingredients, Price, Rating and Button */}
           <div className="space-y-2">
             <p>
               <span className="font-semibold text-lg">Ingredients:</span>{" "}
@@ -44,9 +41,7 @@ const CoffeeDetails = () => {
               <span className="font-semibold text-lg">Price:</span> $ {price}
             </p>
 
-            {/* Rating & Order Button */}
             <div className="flex justify-between items-center">
-              {/* Rating */}
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-lg">Rating:</span>
                 <div className="rating rating-sm">

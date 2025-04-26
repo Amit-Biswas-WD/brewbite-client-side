@@ -1,9 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="bg-[#f5ebe6] text-black py-8 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#f1d9cc] text-black py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-lg font-medium mb-4">
           &copy; 2025 BrewBite. All rights reserved.
@@ -42,7 +47,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
           </a>
         </div>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-black">
           Designed and developed with ❤️ by BrewBite Team
         </p>
       </div>

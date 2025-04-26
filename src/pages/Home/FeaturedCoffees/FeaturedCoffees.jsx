@@ -38,21 +38,14 @@ const FeaturedCoffees = () => {
                 </div>
 
                 <div className="flex justify-between items-center mt-4">
+                  <Link to={`/coffeeDetails/${coffee._id}`}>
+                    <button className="mt-1 bg-[#7b4f29] text-white px-4 py-2 rounded hover:bg-[#5c3c20]">
+                      View Details
+                    </button>
+                  </Link>
                   <p className="text-black font-semibold text-lg">
                     ${coffee.price}
                   </p>
-                </div>
-
-                <div className="flex justify-evenly gap-3 items-center mt-4">
-                <button className="bg-[#7b4f29] hover:bg-[#5c3c20] text-white py-2 px-6 rounded-full">
-                Order Now
-                  </button>
-
-                  <Link to={`/coffeeDetails/${coffee._id}`}>
-                  <button className="bg-[#7b4f29] hover:bg-[#5c3c20] text-white py-2 px-6 rounded-full">
-                  View Details
-                    </button>
-                  </Link>
                 </div>
               </div>
             ))}

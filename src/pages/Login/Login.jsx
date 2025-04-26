@@ -29,8 +29,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center mt-16 mb-1">
-      <div className="w-full md:w-1/3 p-8 bg-[#f5ebe6]">
+    <div className="flex justify-center mt-16 pb-1 bg-[#f3efed]">
+      <div className="w-full md:w-1/3 p-8 bg-[#f1e5de]">
         <h2 className="text-2xl font-bold text-center text-gray-700 mb-8">
           Welcome back
         </h2>
