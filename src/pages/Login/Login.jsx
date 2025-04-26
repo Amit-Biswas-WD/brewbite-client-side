@@ -3,9 +3,12 @@ import { FaEyeSlash } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Google from "../../shared/Google/Google";
+import useAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { signInUser } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,6 +17,15 @@ const Login = () => {
     const password = from.password.value;
     const valueInfo = { email, password };
     console.log("User Logged:", valueInfo);
+
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result);
+        toast("Login In user Successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -61,7 +73,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#f59152] hover:bg-[#f59152] text-white py-2 rounded-md transition duration-300"
+            className="w-full btn border-none bg-[#f59152] hover:bg-[#f59152] text-white py-2 rounded-md transition duration-300"
           >
             Login
           </button>

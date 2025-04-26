@@ -4,6 +4,7 @@ import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Google from "../../shared/Google/Google";
 import useAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,6 +23,7 @@ const SignIn = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result);
+        toast("Sign In user Successfully");
       })
       .catch((error) => {
         console.log(error);
@@ -95,7 +97,7 @@ const SignIn = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#f59152] text-white py-2 rounded-md transition duration-300"
+            className="w-full btn border-none bg-[#f59152] text-white py-2 rounded-md transition duration-300"
           >
             Sign In
           </button>
