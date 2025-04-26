@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify"; // Toast জন্য
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,11 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     logOut()
-      .then((result) => {
-        console.log(result);
+      .then(() => {
+        toast.success("Logged out successfully");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.message);
       });
   };
 
@@ -24,7 +25,6 @@ const Navbar = () => {
     { name: "All Coffees", path: "/allCoffees" },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Contact", path: "/contact" },
-    { name: "Login", path: "/login" },
   ];
 
   // Scroll listener
@@ -38,6 +38,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Top Navbar */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-400 ${
           isScrolled ? "bg-[#e5c9b7] shadow-md" : "bg-[#ddbeab] shadow-xl"
@@ -60,8 +61,8 @@ const Navbar = () => {
               </div>
             </Link>
 
-            {/* Desktop links */}
-            <div className="hidden md:flex space-x-6">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
@@ -76,9 +77,27 @@ const Navbar = () => {
                   </Link>
                 );
               })}
+              {/* Auth Buttons */}
+              <div>
+                {user?.email ? (
+                  <button
+                    onClick={handleSignOut}
+                    className="flex items-center gap-2 bg-[#e6cbb6] hover:bg-[#c7a891] text-black px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 font-semibold"
+                  >
+                    <span>Log Out</span>
+                  </button>
+                ) : (
+                  <NavLink
+                    to="/login"
+                    className="flex items-center gap-2 bg-[#e6cbb6] hover:bg-[#c7a891] text-black px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 font-semibold"
+                  >
+                    <span>Login</span>
+                  </NavLink>
+                )}
+              </div>
             </div>
 
-            {/* Mobile menu icon */}
+            {/* Mobile Menu Button */}
             <div className="md:hidden">
               <button onClick={() => setIsOpen(!isOpen)} className="text-black">
                 {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
@@ -88,7 +107,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile sidebar menu */}
+      {/* Mobile Sidebar Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-gray-700 shadow-md transform transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -99,7 +118,7 @@ const Navbar = () => {
             <FaTimes size={22} />
           </button>
         </div>
-        <div className="px-6 space-y-4">
+        <div className="px-6 space-y-4 mt-8">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (
@@ -115,6 +134,22 @@ const Navbar = () => {
               </Link>
             );
           })}
+          {/* Mobile Auth Buttons */}
+          {user?.email ? (
+            <button
+              onClick={handleSignOut}
+              className="flex items-center gap-2 bg-[#e6cbb6] hover:bg-[#c7a891] text-black px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              <span>Log Out</span>
+            </button>
+          ) : (
+            <NavLink
+              to="/login"
+              className="flex items-center gap-2 bg-[#e6cbb6] hover:bg-[#c7a891] text-black px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              <span>Login</span>
+            </NavLink>
+          )}
         </div>
       </div>
     </>
