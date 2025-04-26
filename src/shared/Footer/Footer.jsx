@@ -10,7 +10,7 @@ const Footer = () => {
         </p>
         <div className="flex justify-center space-x-6 mb-4">
           <a
-            href="https://www.facebook.com/BrewBite"
+            href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:text-brown-300 transition duration-300"
@@ -18,7 +18,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebookF} size="2x" />
           </a>
           <a
-            href="https://www.instagram.com/BrewBite"
+            href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:text-brown-300 transition duration-300"
@@ -26,7 +26,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
           <a
-            href="https://www.twitter.com/BrewBite"
+            href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:text-brown-300 transition duration-300"
@@ -34,7 +34,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </a>
           <a
-            href="https://www.linkedin.com/company/BrewBite"
+            href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:text-brown-300 transition duration-300"

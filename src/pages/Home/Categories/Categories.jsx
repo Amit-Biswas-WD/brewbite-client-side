@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -30,9 +31,11 @@ const Categories = () => {
       </div>
 
       <div className="text-center mt-8">
-        <button className="bg-[#7b4f29] hover:bg-[#5c3c20] text-white py-2 px-6 rounded-full">
-          Explore More
-        </button>
+        <Link to={`/allCoffees`}>
+          <button className="bg-[#7b4f29] hover:bg-[#5c3c20] text-white py-2 px-6 rounded-full">
+            Explore More
+          </button>
+        </Link>
       </div>
     </div>
   );
