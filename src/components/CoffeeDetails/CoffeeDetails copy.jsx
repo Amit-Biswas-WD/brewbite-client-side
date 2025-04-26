@@ -1,10 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAuth from "../../hooks/useAuth";
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
 
-const CoffeeDetails = () => {
+const CoffeeDetailsCopy = () => {
   const coffee = useLoaderData();
   const { user } = useAuth();
   const email = user?.email || "";
@@ -48,7 +47,6 @@ const CoffeeDetails = () => {
         }
       });
   };
-
 
   return (
     <div className="max-w-4xl mx-auto mt-16 p-6 bg-white shadow-xl rounded-2xl text-gray-800">
@@ -119,4 +117,4 @@ const CoffeeDetails = () => {
   );
 };
 
-export default CoffeeDetails;
+export default CoffeeDetailsCopy;

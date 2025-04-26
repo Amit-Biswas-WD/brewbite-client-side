@@ -40,15 +40,15 @@ const Navbar = () => {
     <>
       {/* Top Navbar */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-400 ${
-          isScrolled ? "bg-[#e5c9b7] shadow-md" : "bg-[#ddbeab] shadow-xl"
+        className={`fixed top-0 w-full z-50 transition-all duration-200 font-sans ${
+          isScrolled ? "bg-[#ecd3c3] shadow-md" : "bg-[#ddbeab]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/">
-              <div className="flex items-center font-sans text-yellow-800">
+              <div className="flex items-center text-yellow-800">
                 <h2 className="text-3xl font-bold uppercase font-playfair hidden lg:block">
                   Brew Bite
                 </h2>
