@@ -1,4 +1,5 @@
 import Categories from "./Categories/Categories";
+import Discover from "./Discover/Discover";
 import FeaturedCoffees from "./featuredCoffees/FeaturedCoffees";
 import HeroCopy from "./Hero/HeroCopy";
 // import Hero from "./Hero/Hero";
@@ -11,6 +12,7 @@ const Home = () => {
       {/* <Hero /> */}
       <HeroCopy/>
       <Categories/>
+      <Discover/>
       <FeaturedCoffees/>
       <Testimonials/>
       <Newsletter/>

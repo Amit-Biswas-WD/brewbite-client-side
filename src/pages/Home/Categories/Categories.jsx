@@ -16,7 +16,7 @@ const Categories = () => {
   return (
     <Parallax
       bgImage={image}
-      strength={300}
+      strength={250}
       bgImageStyle={{ objectFit: "cover" }}
     >
       <div className="py-12 px-4 max-w-7xl mx-auto text-black">
