@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Categories.css"
+import { Parallax } from "react-parallax";
+import "./Categories.css";
+import image from "../../../../public/category/image.png";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -12,8 +14,12 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="bg-black/95">
-      <div className="py-12 px-4 max-w-7xl mx-auto text-white">
+    <Parallax
+      bgImage={image}
+      strength={300}
+      bgImageStyle={{ objectFit: "cover" }}
+    >
+      <div className="py-12 px-4 max-w-7xl mx-auto text-black">
         <h2 className="text-3xl font-bold text-center mb-6 h2">
           Explore Categories
         </h2>
@@ -32,7 +38,7 @@ const Categories = () => {
               <h3 className="text-white text-lg font-semibold z-10 relative">
                 {cat.name}
               </h3>
-              <div className="absolute inset-0 bg-[#000] opacity-60 group-hover:bg-opacity-0 group-hover:translate-y-full transition-all duration-300 ease-in-out z-0"></div>{" "}
+              <div className="absolute inset-0 bg-[#000] opacity-60 group-hover:bg-opacity-0 group-hover:translate-y-full transition-all duration-300 ease-in-out z-0"></div>
             </div>
           ))}
         </div>
@@ -45,7 +51,7 @@ const Categories = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </Parallax>
   );
 };
 

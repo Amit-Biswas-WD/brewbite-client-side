@@ -1,4 +1,4 @@
-import image1 from "../../../../public/banner/image1.png";
+import image1 from "../../../../public/banner/image1.jpg";
 
 const HeroCopy = () => {
   return (
