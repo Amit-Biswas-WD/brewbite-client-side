@@ -2,7 +2,7 @@ import image1 from "../../../../public/banner/image1.png";
 
 const HeroCopy = () => {
   return (
-    <div className="my-16">
+    <div className="mt-16">
       <div
         className="w-full h-[580px] bg-cover bg-center bg-no-repeat pl-10 text-white flex column"
         style={{ backgroundImage: `url(${image1})` }}
