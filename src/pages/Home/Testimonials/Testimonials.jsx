@@ -1,8 +1,5 @@
-import img1 from "../../../../public/testimonial/Emily Carter (1).jpg";
-import img2 from "../../../../public/testimonial/Screenshot_1.png";
-import img3 from "../../../../public/testimonial/sophia-lin.jpg";
-import img4 from "../../../../public/testimonial/testimonial.jpg";
-import "./Testimonials.css"
+import { Parallax } from "react-parallax";
+import "./Testimonials.css";
 
 const testimonials = [
   {
@@ -13,7 +10,7 @@ const testimonials = [
     testimonial:
       "BrewBite's beans are top-notch. The aroma, the flavor — everything feels premium. My customers noticed the upgrade immediately, and sales went up!",
     rating: 5,
-    image: img1,
+    image: "/testimonial/Emily Carter (1).jpg",
   },
   {
     id: 2,
@@ -23,7 +20,7 @@ const testimonials = [
     testimonial:
       "I start every coding session with a BrewBite pour-over. It's smooth, rich, and keeps me focused for hours. Absolute game changer!",
     rating: 4,
-    image: img2,
+    image: "/testimonial/Screenshot_1.png",
   },
   {
     id: 3,
@@ -33,45 +30,45 @@ const testimonials = [
     testimonial:
       "From the first sip, I knew BrewBite was different. It's bold yet balanced — perfect for my morning routine and photo-friendly for the ‘gram too!",
     rating: 5,
-    image: img3,
+    image: "/testimonial/sophia-lin.jpg",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8" 
-    style={{
-      backgroundImage: `url(${img4})`,
-      height: "560px",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}>
-      <h2 className="title text-3xl font-bold text-center text-brown-900 mb-10 text-white">
-        What Our Customers Say
-      </h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((t) => (
-          <div
-            key={t.id}
-            className="bg-[#58311591] opacity-100 text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center"
-          >
-            <img
-              src={t.image}
-              alt={t.name}
-              className="w-24 h-24 rounded-full object-cover mb-4"
-            />
-            <p className="italic mb-4">"{t.testimonial}"</p>
-            <div className="font-semibold text-brown-800">{t.name}</div>
-            <div className="text-sm">
-              {t.designation} at {t.company}
+    <Parallax
+      bgImage="/testimonial/testimonial.jpg"
+      strength={500}
+      bgImageStyle={{ objectFit: "cover" }}
+    >
+      <div className="py-24 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl title font-bold text-center text-white mb-10">
+          What Our Customers Say
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((t) => (
+            <div
+              key={t.id}
+              className="bg-[#58311591] backdrop-blur-md text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center"
+            >
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-24 h-24 rounded-full object-cover mb-4"
+              />
+              <p className="italic mb-4">"{t.testimonial}"</p>
+              <div className="font-semibold">{t.name}</div>
+              <div className="text-sm">
+                {t.designation} at {t.company}
+              </div>
+              <div className="mt-2 text-yellow-400 text-lg">
+                {"★".repeat(t.rating) + "☆".repeat(5 - t.rating)}
+              </div>
             </div>
-            <div className="mt-2 text-yellow-500">
-              {"★".repeat(t.rating) + "☆".repeat(5 - t.rating)}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </Parallax>
   );
 };
 
