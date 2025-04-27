@@ -1,15 +1,15 @@
-import image from "../../../../public/Discover/discover.jpg";
+import image from "../../../../public/Discover/discover.png";
 import "./Discover.css";
 
 const Discover = () => {
   return (
-    <div>
-      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-10 container mx-auto py-20">
-        <div className="">
-          <h2 className="text-[#603809] text-[54px] font-bold">
+    <div className="bg-gradient-to-r to-[#ffff] from-[#f1e9e2]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto py-20">
+        <div className="p-6">
+          <h2 className="text-[#603809] text-[53px] font-bold">
             Discover the best coffee
           </h2>
-          <p className="text-xl font-normal text-[#707070] max-w-[585px] my-8">
+          <p className="text-xl font-normal text-[#707070] lg:max-w-[650px] sm:max-w-[850px] my-8">
             Bean Scene is a coffee shop that provides you with quality coffee
             that helps boost your productivity and helps build your mood. Having
             a cup of coffee is good, but having a cup of real coffee is greater.
@@ -20,7 +20,11 @@ const Discover = () => {
             Learn More
           </button>
         </div>
-        <img src={image} alt="" className="max-w-[600px] max-h-[450px]" />
+        <img
+          src={image}
+          alt=""
+          className="max-w-[600px] max-h-[450px] mx-auto"
+        />
       </div>
     </div>
   );

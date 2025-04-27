@@ -23,7 +23,7 @@ const Categories = () => {
         <h2 className="text-3xl font-bold text-center mb-6 h2">
           Explore Categories
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {categories.map((cat, index) => (
             <div
               key={index}
