@@ -63,7 +63,7 @@ const Categories = () => {
                 className="relative group text-center transition-all overflow-hidden shadow flex flex-col justify-center items-center"
                 style={{
                   backgroundImage: `url(${cat.image})`,
-                  height: "250px",
+                  height: "300px",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
