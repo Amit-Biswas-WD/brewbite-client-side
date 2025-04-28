@@ -26,6 +26,7 @@ const FeaturedCoffees = () => {
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay]}
+          
         >
           {featuredCoffees
             .filter((coffee) => coffee.featuredCoffee)

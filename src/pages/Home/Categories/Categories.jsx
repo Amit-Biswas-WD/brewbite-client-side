@@ -28,8 +28,8 @@ const Categories = () => {
           Explore Categories
         </h2>
         <Swiper
-          slidesPerView={5}
-          spaceBetween={30}
+          slidesPerView={1} // মোবাইলের জন্য
+          spaceBetween={20}
           pagination={{
             clickable: true,
           }}
@@ -38,6 +38,24 @@ const Categories = () => {
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay]}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+          }}
         >
           {categories.map((cat) => (
             <SwiperSlide key={cat._id}>
@@ -45,7 +63,7 @@ const Categories = () => {
                 className="relative group text-center transition-all overflow-hidden shadow flex flex-col justify-center items-center"
                 style={{
                   backgroundImage: `url(${cat.image})`,
-                  height: "300px",
+                  height: "250px",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -60,7 +78,7 @@ const Categories = () => {
         </Swiper>
         <div className="text-center mt-8">
           <Link to={`/allCoffees`}>
-            <button className="bg-[#7b4f29] hover:bg-[#5c3c20] text-white py-2 px-6 rounded-full">
+            <button className="bg-[#7b4f29] hover:bg-[#5c3c20] text-white py-2 px-6 rounded-full text-sm md:text-base">
               Explore More
             </button>
           </Link>
