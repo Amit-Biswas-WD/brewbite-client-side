@@ -27,7 +27,7 @@ const Categories = () => {
           {categories.map((cat, index) => (
             <div
               key={index}
-              className="relative group text-center transition-all overflow-hidden rounded-lg shadow flex flex-col justify-center items-center"
+              className="relative group text-center transition-all overflow-hidden shadow flex flex-col justify-center items-center"
               style={{
                 backgroundImage: `url(${cat.image})`,
                 height: "300px",
@@ -38,7 +38,7 @@ const Categories = () => {
               <h3 className="text-white text-lg font-semibold z-10 relative">
                 {cat.name}
               </h3>
-              <div className="absolute inset-0 bg-[#000] opacity-60 group-hover:bg-opacity-0 group-hover:translate-y-full transition-all duration-300 ease-in-out z-0"></div>
+              <div className="absolute inset-0 bg-[#1b1a1a] opacity-60 group-hover:bg-opacity-0 group-hover:translate-y-full transition-all duration-300 ease-in-out z-0"></div>
             </div>
           ))}
         </div>

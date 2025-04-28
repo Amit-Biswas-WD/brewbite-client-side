@@ -36,39 +36,42 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Parallax
-      bgImage="/testimonial/testimonial.jpg"
-      strength={500}
-      bgImageStyle={{ objectFit: "cover" }}
-    >
-      <div className="py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl title font-bold text-center text-white mb-10">
-          What Our Customers Say
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t) => (
-            <div
-              key={t.id}
-              className="bg-[#58311591] backdrop-blur-md text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center"
-            >
-              <img
-                src={t.image}
-                alt={t.name}
-                className="w-24 h-24 rounded-full object-cover mb-4"
-              />
-              <p className="italic mb-4">"{t.testimonial}"</p>
-              <div className="font-semibold">{t.name}</div>
-              <div className="text-sm">
-                {t.designation} at {t.company}
+    <div className="relative group overflow-hidden shadow">
+      <Parallax
+        bgImage="/testimonial/testimonial.jpg"
+        strength={500}
+        bgImageStyle={{ objectFit: "cover" }}
+      >
+        <div className="py-24 px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl title font-bold text-center text-white mb-10">
+            What Our Customers Say
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((t) => (
+              <div
+                key={t.id}
+                className="bg-[#58311591] backdrop-blur-md text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center"
+              >
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-24 h-24 rounded-full object-cover mb-4"
+                />
+                <p className="italic mb-4">"{t.testimonial}"</p>
+                <div className="font-semibold">{t.name}</div>
+                <div className="text-sm">
+                  {t.designation} at {t.company}
+                </div>
+                <div className="mt-2 text-yellow-400 text-lg">
+                  {"★".repeat(t.rating) + "☆".repeat(5 - t.rating)}
+                </div>
               </div>
-              <div className="mt-2 text-yellow-400 text-lg">
-                {"★".repeat(t.rating) + "☆".repeat(5 - t.rating)}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </Parallax>
+      </Parallax>
+      <div className="absolute inset-0 bg-[#000] opacity-10 ease-in-out z-0"></div>
+    </div>
   );
 };
 
