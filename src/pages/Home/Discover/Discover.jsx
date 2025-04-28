@@ -4,7 +4,7 @@ import "./Discover.css";
 const Discover = () => {
   return (
     <div className="bg-gradient-to-r to-[#ffff] from-[#f1e9e2]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto px-4 py-20 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto px-4 py-10 items-center">
         <div className="p-6">
           <h2 className="text-[#603809] text-4xl md:text-5xl font-bold max-w-[650px]">
             Discover the best coffee
@@ -25,7 +25,7 @@ const Discover = () => {
           <img
             src={image}
             alt="Coffee"
-            className="lg:max-w-[600px] md:max-w-[400px] max-h-[450px] w-full object-cover my-auto"
+            className="lg:max-w-[600px] md:max-w-[400px] max-h-[450px] w-full bg-cover object-cover my-auto"
           />
         </div>
       </div>

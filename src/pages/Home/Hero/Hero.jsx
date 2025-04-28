@@ -1,26 +1,24 @@
-import hero from "../../../../public/hero/harvesterimg.jpg";
+import image1 from "../../../../public/banner/image1.jpg";
 
 const Hero = () => {
   return (
-    <div>
-      <div className="">
-        <div className="hero min-h-screen bg-[#f5ebe6]">
-          <div className="hero-content flex-col lg:flex-row-reverse">
-            <img src={hero} className="max-w-lg shadow-2xl" alt="Hero Visual" />
-            <div>
-              <h1 className="text-5xl font-playfair font-bold text-black">
-                Welcome to Brew Bite
-              </h1>
-              <p className="py-6 text-lg text-gray-600">
-                Your favorite place for freshly brewed coffee and warm
-                conversations. Discover handcrafted flavors made with passion
-                and served with a smile.
-              </p>
-              <button className="btn btn-active btn-primary">
-                Explore Menu
-              </button>
-            </div>
-          </div>
+    <div className="mt-16">
+      <div
+        className="w-full h-[580px] bg-cover bg-center bg-no-repeat pl-10 text-white flex column"
+        style={{ backgroundImage: `url(${image1})` }}
+      >
+        <div className="my-auto">
+          <h2 className="text-[64px] font-bold max-w-[580px]">
+            FRESH COFFEE IN THE MORNING
+          </h2>
+          <p className="max-w-[600px] text-lg font-normal text-gray-200">
+            Starting the day with fresh coffee can provide a number of benefits,
+            including increased energy and alertness, improved cognitive
+            function, and a boost to mood.
+          </p>
+          <button className="my-6 bg-[#7b4f29] text-white px-4 py-3 rounded">
+          ORDER NOW
+          </button>
         </div>
       </div>
     </div>

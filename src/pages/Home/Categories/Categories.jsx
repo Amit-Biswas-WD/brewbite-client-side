@@ -28,7 +28,7 @@ const Categories = () => {
           Explore Categories
         </h2>
         <Swiper
-          slidesPerView={1} // মোবাইলের জন্য
+          slidesPerView={1} 
           spaceBetween={20}
           pagination={{
             clickable: true,

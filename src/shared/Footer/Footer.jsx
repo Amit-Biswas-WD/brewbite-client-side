@@ -1,54 +1,48 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
+  FaTwitter,
+  FaInstagramSquare,
+  FaFacebookF,
+  FaTumblr,
+} from "react-icons/fa";
+import { BsVimeo } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="bg-[#f1d9cc] text-black py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
-        <p className="text-lg font-medium mb-4">
-          &copy; 2025 BrewBite. All rights reserved.
-        </p>
-        <div className="flex justify-center space-x-6 mb-4">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black hover:text-brown-300 transition duration-300"
-          >
-            <FontAwesomeIcon icon={faFacebookF} size="2x" />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black hover:text-brown-300 transition duration-300"
-          >
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black hover:text-brown-300 transition duration-300"
-          >
-            <FontAwesomeIcon icon={faTwitter} size="2x" />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black hover:text-brown-300 transition duration-300"
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-          </a>
+    <div className="bg-[#0a0909] text-white py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mt-6 mx-auto text-center">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-20">
+          <div>
+            <p className="text-base">
+              Designed and developed with ❤️ <br /> by BrewBite Team
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8">
+            <h2 className="hover:text-[#e7b38d] transition-all duration-300 cursor-pointer">
+              Home
+            </h2>
+            <h2 className="hover:text-[#e7b38d] transition-all duration-300 cursor-pointer">
+              All Coffees
+            </h2>
+            <h2 className="hover:text-[#e7b38d] transition-all duration-300 cursor-pointer">
+              Dashboard
+            </h2>
+            <h2 className="hover:text-[#e7b38d] transition-all duration-300 cursor-pointer">
+              Contact
+            </h2>
+          </div>
+
+          <div className="flex gap-6 justify-center">
+            <FaTwitter className="hover:text-[#e7b38d] transition-all duration-300 w-5 h-5" />
+            <FaInstagramSquare className="hover:text-[#e7b38d] transition-all duration-300 w-5 h-5" />
+            <FaFacebookF className="hover:text-[#e7b38d] transition-all duration-300 w-5 h-5" />
+            <BsVimeo className="hover:text-[#e7b38d] transition-all duration-300 w-5 h-5" />
+            <FaTumblr className="hover:text-[#e7b38d] transition-all duration-300 w-5 h-5" />
+          </div>
         </div>
-        <p className="text-sm text-black">
-          Designed and developed with ❤️ by BrewBite Team
+
+        <p className="mt-4 text-sm">
+          &copy; 2025 Your Company. All rights reserved.
         </p>
       </div>
     </div>
