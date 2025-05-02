@@ -28,7 +28,7 @@ const Categories = () => {
           Explore Categories
         </h2>
         <Swiper
-          slidesPerView={1} 
+          slidesPerView={1}
           spaceBetween={20}
           pagination={{
             clickable: true,
@@ -59,20 +59,22 @@ const Categories = () => {
         >
           {categories.map((cat) => (
             <SwiperSlide key={cat._id}>
-              <div
-                className="relative group text-center transition-all overflow-hidden shadow flex flex-col justify-center items-center"
-                style={{
-                  backgroundImage: `url(${cat.image})`,
-                  height: "300px",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <h3 className="text-white text-lg font-semibold z-10 relative">
-                  {cat.name}
-                </h3>
-                <div className="absolute inset-0 bg-[#1b1a1a] opacity-60 group-hover:bg-opacity-0 group-hover:translate-y-full transition-all duration-300 ease-in-out z-0"></div>
-              </div>
+              <Link to={`/allCoffees/${cat.category}`}>
+                <div
+                  className="relative group text-center transition-all overflow-hidden shadow flex flex-col justify-center items-center"
+                  style={{
+                    backgroundImage: `url(${cat.image})`,
+                    height: "300px",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <h3 className="text-white text-lg font-semibold z-10 relative">
+                    {cat.category}
+                  </h3>
+                  <div className="absolute inset-0 bg-[#1b1a1a] opacity-60 group-hover:bg-opacity-0 group-hover:translate-y-full transition-all duration-300 ease-in-out z-0"></div>
+                </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
