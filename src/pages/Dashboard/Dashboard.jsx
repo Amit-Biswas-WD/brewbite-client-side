@@ -1,38 +1,71 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Dashboard = () => {
-  const [data, setData] = useState([]);
+  const [bookings, setBookings] = useState([]);
   const { user } = useAuth();
 
+  const url = `http://localhost:5000/orders?email=${user?.email}`;
+
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user?.email}`)
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
-        console.log(data);
+        setBookings(data);
       });
-  }, [user]);
+  }, [url, bookings]);
+
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/orders/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              const remaining = bookings.filter(
+                (bookingItem) => bookingItem._id !== id
+              );
+              setBookings(remaining);
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    });
+  };
 
   return (
-    <div className="container mx-auto">
-      <div className="mt-16 text-black">Dashboard: {data.length}</div>
-      <div className="text-black mt-8">
-        <h2 className="text-2xl font-bold">My Orders</h2>
+    <div className="container mx-auto mt-16">
+      <div className="text-black">
+        <h2 className="text-2xl font-bold">My Orders: {bookings.length}</h2>
         <div className="overflow-x-auto">
           <table className="table w-full">
             <thead className="text-black">
               <tr>
                 <th className="!text-black">Image</th>
-                <th className="!text-black">Order ID</th>
                 <th className="!text-black">Product Name</th>
+                <th className="!text-black">Category</th>
                 <th className="!text-black">Price</th>
                 <th className="!text-black">Edit</th>
                 <th className="!text-black">Delete</th>
               </tr>
             </thead>
             <tbody className="!text-black">
-              {data.map((order) => (
+              {bookings.map((order) => (
                 <tr key={order._id} className="!text-black">
                   <td className="!text-black">
                     <img
@@ -41,11 +74,18 @@ const Dashboard = () => {
                       className="w-12 h-12 rounded-xl"
                     />
                   </td>
-                  <td className="!text-black">{order._id}</td>
                   <td className="!text-black">{order.coffee.name}</td>
+                  <td className="!text-black">{order.coffee.category}</td>
                   <td className="!text-black">$ {order.coffee.price}</td>
                   <td className="!text-black">Edit</td>
-                  <td className="!text-black">Delete</td>
+                  <td className="!text-black">
+                    <button
+                      onClick={() => handleDelete(order._id)}
+                      className="btn btn-outline"
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
