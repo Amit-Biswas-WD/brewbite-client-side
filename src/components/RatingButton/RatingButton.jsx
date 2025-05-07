@@ -8,12 +8,14 @@ const RatingButton = ({ featuredCoffees, setRating }) => {
 
   const handleHighRating = () => {
     const sorted = [...featuredCoffees].sort((a, b) => b.rating - a.rating);
+    console.log(sorted, "HighRating");
     setRating(sorted);
     closeDropdown();
   };
 
   const handleLowRating = () => {
     const sorted = [...featuredCoffees].sort((a, b) => a.rating - b.rating);
+    console.log(sorted, "LowRating");
     setRating(sorted);
     closeDropdown();
   };

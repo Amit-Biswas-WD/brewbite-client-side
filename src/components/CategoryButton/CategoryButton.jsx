@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const CategoryButton = ({ featuredCoffees, setCategory }) => {
+const CategoryButton = ({ featuredCoffees, setCategory, selectedCategory }) => {
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -13,6 +14,12 @@ const CategoryButton = ({ featuredCoffees, setCategory }) => {
     setCategory(filteredCoffees);
     closeDropdown();
   };
+
+  useEffect(() => {
+    if (selectedCategory) {
+      handleCategoryFilter(selectedCategory);
+    }
+  }, [selectedCategory]); 
 
   return (
     <div className="relative inline-block text-left mt-[68px]">
@@ -40,36 +47,15 @@ const CategoryButton = ({ featuredCoffees, setCategory }) => {
       {isOpen && (
         <div className="absolute -right-16 z-10 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
           <div className="py-1">
-            <button
-              onClick={() => handleCategoryFilter("Espresso")}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Espresso
-            </button>
-            <button
-              onClick={() => handleCategoryFilter("Latte")}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Latte
-            </button>
-            <button
-              onClick={() => handleCategoryFilter("Cappuccino")}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Cappuccino
-            </button>
-            <button
-              onClick={() => handleCategoryFilter("Mocha")}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Mocha
-            </button>
-            <button
-              onClick={() => handleCategoryFilter("Cold Brew")}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Cold Brew
-            </button>
+            {["Espresso", "Latte", "Cappuccino", "Mocha", "Cold Brew"].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => handleCategoryFilter(cat)}
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
       )}

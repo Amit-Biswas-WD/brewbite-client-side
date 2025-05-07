@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [bookings, setBookings] = useState([]);
@@ -14,7 +15,7 @@ const Dashboard = () => {
       .then((data) => {
         setBookings(data);
       });
-  }, [url, bookings]);
+  }, [url]);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -32,9 +33,8 @@ const Dashboard = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              Swal.fire("Deleted!", "Your order has been deleted.", "success");
               const remaining = bookings.filter(
                 (bookingItem) => bookingItem._id !== id
               );
@@ -51,34 +51,42 @@ const Dashboard = () => {
   return (
     <div className="container mx-auto mt-16">
       <div className="text-black">
-        <h2 className="text-2xl font-bold">My Orders: {bookings.length}</h2>
+        <h2 className="text-2xl font-bold mb-4">
+          My Orders: {bookings.length}
+        </h2>
         <div className="overflow-x-auto">
           <table className="table w-full">
             <thead className="text-black">
               <tr>
                 <th className="!text-black">Image</th>
                 <th className="!text-black">Product Name</th>
-                <th className="!text-black">Category</th>
-                <th className="!text-black">Price</th>
+                <th className="!text-black">Customer Name</th>
+                <th className="!text-black">Order Date</th>
+                <th className="!text-black">Location</th>
                 <th className="!text-black">Edit</th>
                 <th className="!text-black">Delete</th>
               </tr>
             </thead>
             <tbody className="!text-black">
               {bookings.map((order) => (
-                <tr key={order._id} className="!text-black">
-                  <td className="!text-black">
+                <tr key={order._id}>
+                  <td>
                     <img
                       src={order.coffee.image}
-                      alt="Product"
+                      alt={order.coffee.name}
                       className="w-12 h-12 rounded-xl"
                     />
                   </td>
-                  <td className="!text-black">{order.coffee.name}</td>
-                  <td className="!text-black">{order.coffee.category}</td>
-                  <td className="!text-black">$ {order.coffee.price}</td>
-                  <td className="!text-black">Edit</td>
-                  <td className="!text-black">
+                  <td>{order.coffee.name}</td>
+                  <td>{order.customerInfo?.customerName || "N/A"}</td>
+                  <td>{order.customerInfo?.orderDate || "N/A"}</td>
+                  <td>{order.customerInfo?.location || "N/A"}</td>
+                  <td>
+                    <Link to={`/update/${order._id}`}>
+                      <button className="btn btn-outline">Edit</button>
+                    </Link>
+                  </td>
+                  <td>
                     <button
                       onClick={() => handleDelete(order._id)}
                       className="btn btn-outline"
