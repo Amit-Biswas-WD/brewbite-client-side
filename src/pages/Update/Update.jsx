@@ -12,8 +12,7 @@ const Update = () => {
     const orderDate = form.orderDate.value;
     const location = form.location.value;
     const valueInfo = { customerName, orderDate, location };
-    console.log(valueInfo);
-
+    
     fetch(`http://localhost:5000/orders/${myData._id}`, {
       method: "PUT",
       headers: {

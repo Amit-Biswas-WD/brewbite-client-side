@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
-    <div className="bg-[#f5ebe6]">
-      <div className="max-w-md mt-[64px] mx-auto p-6 bg-white text-black shadow rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 mt-16 py-12">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
+        <h2 className="text-2xl font-bold mb-4 text-black">Contact Us</h2>
         <form className="space-y-4">
           <input
             name="name"
