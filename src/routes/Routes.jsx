@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Contact from "../pages/Contact/Contact";
 import CoffeeDetails from "../components/CoffeeDetails/CoffeeDetails";
 import Update from "../pages/Update/Update";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/coffeeDetails/:id",
-        element: <CoffeeDetails />,
+        element: (
+          <PrivateRoute>
+            <CoffeeDetails />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/coffees/${params.id}`),
       },
@@ -38,7 +43,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/contact",
@@ -46,11 +55,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        element: <Update/>,
+        element: <Update />,
         loader: ({ params }) =>
-          fetch(
-            `http://localhost:5000/orders/${params.id}`
-          ),
+          fetch(`http://localhost:5000/orders/${params.id}`),
       },
     ],
   },

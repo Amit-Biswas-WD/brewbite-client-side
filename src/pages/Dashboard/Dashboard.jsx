@@ -49,55 +49,57 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container mx-auto mt-16">
-      <div className="text-black">
-        <h2 className="text-2xl font-bold mb-4">
-          My Orders: {bookings.length}
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="table w-full">
-            <thead className="text-black">
-              <tr>
-                <th className="!text-black">Image</th>
-                <th className="!text-black">Product Name</th>
-                <th className="!text-black">Customer Name</th>
-                <th className="!text-black">Order Date</th>
-                <th className="!text-black">Location</th>
-                <th className="!text-black">Edit</th>
-                <th className="!text-black">Delete</th>
-              </tr>
-            </thead>
-            <tbody className="!text-black">
-              {bookings.map((order) => (
-                <tr key={order._id}>
-                  <td>
-                    <img
-                      src={order.coffee.image}
-                      alt={order.coffee.name}
-                      className="w-12 h-12 rounded-xl"
-                    />
-                  </td>
-                  <td>{order.coffee.name}</td>
-                  <td>{order.customerInfo?.customerName || "N/A"}</td>
-                  <td>{order.customerInfo?.orderDate || "N/A"}</td>
-                  <td>{order.customerInfo?.location || "N/A"}</td>
-                  <td>
-                    <Link to={`/update/${order._id}`}>
-                      <button className="btn btn-outline">Edit</button>
-                    </Link>
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => handleDelete(order._id)}
-                      className="btn btn-outline"
-                    >
-                      Delete
-                    </button>
-                  </td>
+    <div className="bg-[#f5ebe6]">
+      <div className="container mx-auto mt-16">
+        <div className="text-black">
+          <h2 className="text-2xl font-bold mb-4">
+            My Orders: {bookings.length}
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="table w-full">
+              <thead className="text-black">
+                <tr className="bg-[#f1cebc]">
+                  <th className="!text-black">Image</th>
+                  <th className="!text-black">Product Name</th>
+                  <th className="!text-black">Customer Name</th>
+                  <th className="!text-black">Order Date</th>
+                  <th className="!text-black">Location</th>
+                  <th className="!text-black">Edit</th>
+                  <th className="!text-black">Delete</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="!text-black">
+                {bookings.map((order) => (
+                  <tr key={order._id}>
+                    <td>
+                      <img
+                        src={order.coffee.image}
+                        alt={order.coffee.name}
+                        className="w-12 h-12 rounded-xl"
+                      />
+                    </td>
+                    <td>{order.coffee.name}</td>
+                    <td>{order.customerInfo?.customerName || "N/A"}</td>
+                    <td>{order.customerInfo?.orderDate || "N/A"}</td>
+                    <td>{order.customerInfo?.location || "N/A"}</td>
+                    <td>
+                      <Link to={`/update/${order._id}`}>
+                        <button className="btn btn-outline">Edit</button>
+                      </Link>
+                    </td>
+                    <td>
+                      <button
+                        onClick={() => handleDelete(order._id)}
+                        className="btn btn-outline"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
