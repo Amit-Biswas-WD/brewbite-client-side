@@ -1,10 +1,17 @@
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && !user?.email) {
+      navigate("/login", { replace: true, state: { from: location } });
+    }
+  }, [loading, user, navigate, location]);
 
   if (loading) {
     return (
@@ -15,11 +22,10 @@ const PrivateRoute = ({ children }) => {
   }
 
   if (user?.email) {
-    return children; 
+    return children;
   }
 
-  navigate("/login", { replace: true, state: { from: location } });
-
+  // Optional fallback
   return <div>Redirecting to Sign In...</div>;
 };
 
