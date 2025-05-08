@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/allCoffees",
+        path: "/allCoffees/:category",
         element: <Coffees />,
       },
       {

@@ -4,24 +4,44 @@ import CategoryButton from "../../components/CategoryButton/CategoryButton";
 import PriceButton from "../../components/PriceButton/PriceButton";
 import RatingButton from "../../components/RatingButton/RatingButton";
 import { useEffect, useState } from "react";
-import useCoffees from './../../hooks/useCoffees';
+import useCoffees from "./../../hooks/useCoffees";
+import { useParams } from "react-router-dom";
 
 const CoffeesDropDown = () => {
   const [featuredCoffees] = useCoffees([]);
   const [value, setValue] = useState([]);
+  const categories = ["Espresso", "Latte", "Cappuccino", "Mocha", "Cold Brew"];
+  const { category } = useParams();
 
   useEffect(() => {
-    setValue(featuredCoffees);
-  }, [featuredCoffees]);
+    if (category && categories.includes(category)) {
+      const filtered = featuredCoffees.filter(
+        (coffee) => coffee.category === category
+      );
+      setValue(filtered);
+    } else {
+      setValue(featuredCoffees);
+    }
+  }, [featuredCoffees, category]);
 
   return (
     <div className="bg-[#f5ebe6]">
       <div className="container mx-auto">
         <div className="flex justify-between mt-4 mb-2 stack gap-8">
-          <CategoryButton featuredCoffees={featuredCoffees} setCategory={setValue} />
+          <CategoryButton
+            featuredCoffees={featuredCoffees}
+            setCategory={setValue}
+            selectedCategory={category}
+          />
           <PriceButton featuredCoffees={featuredCoffees} setPrice={setValue} />
-          <RatingButton featuredCoffees={featuredCoffees} setRating={setValue} />
-          <SearchBar featuredCoffees={featuredCoffees} setSearchBar={setValue}/>
+          <RatingButton
+            featuredCoffees={featuredCoffees}
+            setRating={setValue}
+          />
+          <SearchBar
+            featuredCoffees={featuredCoffees}
+            setSearchBar={setValue}
+          />
         </div>
         <Coffees value={value} />
       </div>
