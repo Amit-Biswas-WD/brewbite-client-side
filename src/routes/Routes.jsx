@@ -31,7 +31,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffees/${params.id}`),
+          fetch(`https://brewbite-server-side.vercel.app/coffees/${params.id}`, {
+            credentials: "include",
+          }),
       },
       {
         path: "/login",
@@ -57,7 +59,9 @@ export const router = createBrowserRouter([
         path: "/update/:id",
         element: <Update />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/orders/${params.id}`),
+          fetch(`https://brewbite-server-side.vercel.app/orders/${params.id}`, {
+            credentials: "include",
+          }),
       },
     ],
   },

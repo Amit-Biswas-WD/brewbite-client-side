@@ -12,7 +12,7 @@ const Categories = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("./categories.json")
+    fetch("https://brewbite-server-side-ca7s88vlk-amit6.vercel.app/category")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);

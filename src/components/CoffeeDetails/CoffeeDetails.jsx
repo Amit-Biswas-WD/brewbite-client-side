@@ -20,7 +20,12 @@ const CoffeeDetails = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${email}`)
+    fetch(
+      `https://brewbite-server-side.vercel.app/orders?email=${email}`,
+      {
+        credentials: "include",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setUserOrders(data);
@@ -57,7 +62,7 @@ const CoffeeDetails = () => {
       customerInfo: formData,
     };
 
-    fetch(`http://localhost:5000/orders`, {
+    fetch(`https://brewbite-server-side.vercel.app/orders`, {
       method: "POST",
       body: JSON.stringify(orderData),
       headers: {

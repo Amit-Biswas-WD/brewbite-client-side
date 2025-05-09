@@ -7,10 +7,12 @@ const Dashboard = () => {
   const [bookings, setBookings] = useState([]);
   const { user } = useAuth();
 
-  const url = `http://localhost:5000/orders?email=${user?.email}`;
+  const url = `https://brewbite-server-side.vercel.app/orders?email=${user?.email}`;
 
   useEffect(() => {
-    fetch(url)
+    fetch(url, {
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
@@ -28,9 +30,12 @@ const Dashboard = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/orders/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://brewbite-server-side.vercel.app/orders/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

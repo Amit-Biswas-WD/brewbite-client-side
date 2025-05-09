@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const Update = () => {
   const myData = useLoaderData();
-  const {customerName, orderDate, location } = myData.customerInfo;
+  const { customerName, orderDate, location } = myData.customerInfo;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,20 +12,23 @@ const Update = () => {
     const orderDate = form.orderDate.value;
     const location = form.location.value;
     const valueInfo = { customerName, orderDate, location };
-    
-    fetch(`http://localhost:5000/orders/${myData._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(valueInfo),
-    })
+
+    fetch(
+      `https://brewbite-server-side.vercel.app/orders/${myData._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(valueInfo),
+        credentials: "include",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         toast("Updated!");
       });
-
   };
 
   return (

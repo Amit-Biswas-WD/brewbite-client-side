@@ -4,7 +4,9 @@ const useCoffees = () => {
   const [featuredCoffees, setFeaturedCoffees] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/coffees")
+    fetch("https://brewbite-server-side.vercel.app/coffees", {
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then((data) => setFeaturedCoffees(data));
   }, []);
