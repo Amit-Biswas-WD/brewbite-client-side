@@ -6,23 +6,38 @@ import RatingButton from "../../components/RatingButton/RatingButton";
 import { useEffect, useState } from "react";
 import useCoffees from "./../../hooks/useCoffees";
 import { useParams } from "react-router-dom";
+import { HashLoader } from "react-spinners";
 
 const CoffeesDropDown = () => {
   const [featuredCoffees] = useCoffees([]);
   const [value, setValue] = useState([]);
-  const categories = ["Espresso", "Latte", "Cappuccino", "Mocha", "Cold Brew"];
+  const [loading, setLoading] = useState(true);
   const { category } = useParams();
 
+  const categories = ["Espresso", "Latte", "Cappuccino", "Mocha", "Cold Brew"];
+
   useEffect(() => {
+    if (featuredCoffees.length === 0) return;
+
     if (category && categories.includes(category)) {
       const filtered = featuredCoffees.filter(
         (coffee) => coffee.category === category
       );
       setValue(filtered);
     } else {
-      setValue(featuredCoffees);
+      setValue(featuredCoffees); // default: all coffee
     }
+
+    setLoading(false); // Loading off after data set
   }, [featuredCoffees, category]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center">
+        <HashLoader color="#7b4f29" size={80} speedMultiplier={1.5} />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#f5ebe6]">

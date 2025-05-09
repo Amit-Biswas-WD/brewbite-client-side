@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { HashLoader } from "react-spinners";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -15,8 +16,8 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="max-w-7xl mx-auto bg-white mt-16">
-        <h1 className="text-xl text-black">Loading Page....</h1>
+      <div className="min-h-screen flex justify-center items-center">
+        <HashLoader color="#7b4f29" size={80} speedMultiplier={1.5} />
       </div>
     );
   }

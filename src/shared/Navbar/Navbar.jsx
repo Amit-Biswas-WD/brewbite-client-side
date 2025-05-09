@@ -22,7 +22,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "All Coffees", path: "/allCoffees/Espresso" },
+    { name: "All Coffees", path: "/allCoffees/all" },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Contact", path: "/contact" },
   ];
