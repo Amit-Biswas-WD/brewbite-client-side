@@ -12,7 +12,7 @@ const Categories = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("https://brewbite-server-side-ca7s88vlk-amit6.vercel.app/category", {
+    fetch("https://brewbite-server-side.vercel.app/category", {
       credentials: "include",
     })
       .then((res) => res.json())
