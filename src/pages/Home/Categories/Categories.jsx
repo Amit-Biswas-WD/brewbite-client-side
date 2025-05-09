@@ -7,17 +7,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
+import { HashLoader } from "react-spinners";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://brewbite-server-side.vercel.app/category", {
       credentials: "include",
     })
       .then((res) => res.json())
-      .then((data) => setCategories(data));
+      .then((data) => {
+        setCategories(data);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center">
+        <HashLoader color="#7b4f29" size={80} speedMultiplier={1.5} />
+      </div>
+    );
+  }
 
   return (
     <Parallax

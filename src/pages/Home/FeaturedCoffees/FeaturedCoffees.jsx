@@ -5,9 +5,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
+import { HashLoader } from "react-spinners";
 
 const FeaturedCoffees = () => {
   const [featuredCoffees] = useCoffees();
+  
+
+    if (!featuredCoffees || featuredCoffees.length === 0) {
+      return (
+        <div className="min-h-screen flex justify-center items-center">
+          <HashLoader color="#7b4f29" size={80} speedMultiplier={1.5} />
+        </div>
+      );
+    }
 
   return (
     <div className="bg-[#f5ebe6]">
