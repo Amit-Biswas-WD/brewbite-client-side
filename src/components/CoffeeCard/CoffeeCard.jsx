@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CoffeeCard = ({ coffee }) => {
   return (
     <div className="bg-[#f1f0ef] rounded-lg shadow-md p-4 hover:shadow-xl transition-all duration-300">
-      <div className="w-90 h-64 overflow-hidden">
+      <div className="sm:max-w-[368px] h-64 overflow-hidden">
         <img
           src={coffee.image}
           alt={coffee.name}

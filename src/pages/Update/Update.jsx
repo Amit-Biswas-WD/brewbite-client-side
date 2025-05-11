@@ -1,9 +1,10 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Update = () => {
   const myData = useLoaderData();
   const { customerName, orderDate, location } = myData.customerInfo;
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,21 +14,26 @@ const Update = () => {
     const location = form.location.value;
     const valueInfo = { customerName, orderDate, location };
 
-    fetch(
-      `https://brewbite-server-side.vercel.app/orders/${myData._id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(valueInfo),
-        credentials: "include",
-      }
-    )
+    fetch(`https://brewbite-server-side.vercel.app/orders/${myData._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(valueInfo),
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        toast("Updated!");
+        if (data.modifiedCount > 0) {
+          toast.success("Order updated successfully!");
+          navigate(-1); // 🔁 Go back to previous page
+        } else {
+          toast.info("No changes made.");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error("Update failed!");
       });
   };
 
